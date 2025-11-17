@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <title>Urrgh – The Mould Stuff</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <style>
     :root {
       --urrgh-green: #35c300;
@@ -35,36 +36,38 @@
     /* MOLDS STRIP — CSS BREATHING ANIMATION */
     .mould-banner {
       width: 100%;
-      height: min(25vh, 260px); /* never more than 25% of screen */
+      height: min(28vh, 260px); /* never more than 25% of screen */
       overflow: hidden;
     }
 
-    .mould-banner img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transform-origin: top center;
-      animation: mouldBreath 12s ease-in-out infinite;
-    }
+   .mould-banner img {
+  width: 100%;
+  height: auto;
+  max-height: 28vh;       /* image shrinks if needed, no cropping */
+  display: block;
+  transform-origin: top center;
+  animation: mouldBreath 12s ease-in-out infinite;
+}
 
-    @keyframes mouldBreath {
-      0% {
-        transform: translateY(0) scale(1);
-        filter: blur(0px);
-        opacity: 0.96;
-      }
-      50% {
-        transform: translateY(3px) scale(1.02);
-        filter: blur(0.3px);
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(0) scale(1);
-        filter: blur(0px);
-        opacity: 0.96;
-      }
-    }
+
+ @keyframes mouldBreath {
+  0% {
+    transform: translateY(0) scale(1);
+    filter: blur(0px);
+    opacity: 0.95;
+  }
+  50% {
+    transform: translateY(6px) scale(1.04);
+    filter: blur(0.4px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    filter: blur(0px);
+    opacity: 0.95;
+  }
+}
+
 
     .content {
       flex: 1;
@@ -76,7 +79,7 @@
 
     h1 {
       margin: 0 0 8px;
-      font-size: clamp(2.4rem, 4vw, 3rem);
+      font-size: clamp(4rem, 7vw, 6rem);
       font-weight: 800;
       color: var(--urrgh-green);
     }
