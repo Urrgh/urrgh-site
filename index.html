@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Urrgh – The Mould Stuff</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+    :root {
+      --urrgh-green: #35c300;
+      --urrgh-pink: #ff3f9e;
+      --text-dark: #111111;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background: #ffffff;
+      color: var(--text-dark);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .page {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* MOLDS STRIP — CSS BREATHING ANIMATION */
+    .mould-banner {
+      width: 100%;
+      height: min(28vh, 260px); /* never more than 25% of screen */
+      overflow: hidden;
+    }
+
+   .mould-banner img {
+  width: 100%;
+  height: auto;
+  max-height: 28vh;       /* image shrinks if needed, no cropping */
+  display: block;
+  transform-origin: top center;
+  animation: mouldBreath 12s ease-in-out infinite;
+}
+
+
+ @keyframes mouldBreath {
+  0% {
+    transform: translateY(0) scale(1);
+    filter: blur(0px);
+    opacity: 0.95;
+  }
+  50% {
+    transform: translateY(6px) scale(1.04);
+    filter: blur(0.4px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    filter: blur(0px);
+    opacity: 0.95;
+  }
+}
+
+
+    .content {
+      flex: 1;
+      padding: 32px 20px 40px;
+      max-width: 640px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(4rem, 7vw, 6rem);
+      font-weight: 800;
+      color: var(--urrgh-green);
+    }
+
+    h2 {
+      margin: 0 0 4px;
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+
+    .coming-soon {
+      margin: 4px 0 16px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+    }
+
+    .tagline {
+      margin: 0 0 20px;
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
+
+    .ew-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 4px;
+      padding: 0.1em 0.7em;
+      border-radius: 999px;
+      background: var(--urrgh-pink);
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 0.95em;
+    }
+
+    .subcopy {
+      margin: 0 0 28px;
+      font-size: 0.98rem;
+      line-height: 1.5;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 0.9em 2.2em;
+      border-radius: 999px;
+      border: none;
+      background: var(--urrgh-green);
+      color: #ffffff;
+      font-size: 1rem;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      box-shadow: 0 8px 18px rgba(53, 195, 0, 0.23);
+      transition: transform 0.12s ease, box-shadow 0.12s ease,
+        background 0.12s ease;
+    }
+
+    .cta-button:hover,
+    .cta-button:focus-visible {
+      transform: translateY(-1px);
+      box-shadow: 0 11px 22px rgba(53, 195, 0, 0.32);
+      background: #2cab00;
+    }
+
+    .cta-button:active {
+      transform: translateY(1px);
+      box-shadow: 0 5px 12px rgba(53, 195, 0, 0.28);
+    }
+
+    .footer {
+      text-align: center;
+      padding: 0 16px 18px;
+      font-size: 0.8rem;
+      color: #777777;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- TOP MOULD STRIP -->
+    <div class="mould-banner">
+      <img src="mould-header.jpg" alt="Mould blooming from ceiling" />
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main class="content">
+      <h1>Urrgh</h1>
+      <h2>The Mould Stuff<sup>™</sup>.</h2>
+      <div class="coming-soon">COMING SOON</div>
+
+      <p class="tagline">
+        Because mould is
+        <span class="ew-badge">ew.</span>
+      </p>
+
+      <p class="subcopy">
+        A safe, science-led way to clean mould without wrecking your walls or
+        your deposit.
+      </p>
+
+      <!-- CTA: opens prefilled email to hello@urrgh.com -->
+      <a
+        class="cta-button"
+        href="mailto:hello@urrgh.com?subject=I%20want%20to%20know%20about%20Urrgh&body=Hi%20Urrgh%20team%2C%0D%0A%0D%0APlease%20let%20me%20know%20when%20Urrgh%20%E2%80%93%20The%20Mould%20Stuff%20launches.%0D%0A%0D%0AI%20understand%20you%27ll%20retain%20this%20email%20address%20to%20send%20me%20a%20note%20when%20it%20drops.%0D%0A%0D%0AThanks!"
+      >
+        Find out when it drops
+      </a>
+    </main>
+
+    <footer class="footer">
+      &copy; <span id="year"></span> Urrgh. All rights reserved.
+    </footer>
+  </div>
+
+  <script>
+    // Keep footer year current
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
