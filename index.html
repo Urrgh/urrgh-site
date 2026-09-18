@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Urrgh – The Mould Stuff</title>
+  <title>Urrgh – The Mould Stain Stuff</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <style>
@@ -77,11 +77,12 @@
       text-align: center;
     }
 
-    h1 {
-      margin: 0 0 8px;
-      font-size: clamp(4rem, 7vw, 6rem);
-      font-weight: 800;
-      color: var(--urrgh-green);
+    .urrgh-logo {
+      display: block;
+      width: min(100%, 430px);
+      height: auto;
+      margin: 0 auto 8px;
+      transform: translateX(0.6em);
     }
 
     h2 {
@@ -127,13 +128,13 @@
       padding: 0.9em 2.2em;
       border-radius: 999px;
       border: none;
-      background: var(--urrgh-green);
+      background: #C4D600;
       color: #ffffff;
       font-size: 1rem;
       font-weight: 700;
       text-decoration: none;
       cursor: pointer;
-      box-shadow: 0 8px 18px rgba(53, 195, 0, 0.23);
+      box-shadow: none;
       transition: transform 0.12s ease, box-shadow 0.12s ease,
         background 0.12s ease;
     }
@@ -141,13 +142,13 @@
     .cta-button:hover,
     .cta-button:focus-visible {
       transform: translateY(-1px);
-      box-shadow: 0 11px 22px rgba(53, 195, 0, 0.32);
-      background: #2cab00;
+      box-shadow: none;
+      background: #B4C400;
     }
 
     .cta-button:active {
       transform: translateY(1px);
-      box-shadow: 0 5px 12px rgba(53, 195, 0, 0.28);
+      box-shadow: none;
     }
 
     .footer {
@@ -167,16 +168,18 @@
 
     <!-- MAIN CONTENT -->
     <main class="content">
-      <h1>Urrgh</h1>
+      <img class="urrgh-logo" src="Urrgh-logo-green.png" alt="Urrgh" />
       <h2>The Mould Stuff<sup>™</sup>.</h2>
       <div class="coming-soon">COMING SOON</div>
 
       <p class="tagline">
-             Because<span class="ew-badge">ew</span> = <span class="ew-badge">££</span>
+        Because stains are
+        <span class="ew-badge">ew.</span>
       </p>
 
       <p class="subcopy">
-        Science-led cleaning of mould stains — gentle on walls, kind to deposits.
+        A safe, science-led way to clean mould stains without wrecking your walls or
+        your deposit.
       </p>
 
       <!-- CTA: opens prefilled email to heleen@urrgh.com -->
@@ -199,14 +202,3 @@
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
