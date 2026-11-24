@@ -1,204 +1,647 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
-  <meta charset="UTF-8" />
-  <title>Urrgh – The Mould Stain Stuff</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <style>
-    :root {
-      --urrgh-green: #35c300;
-      --urrgh-pink: #ff3f9e;
-      --text-dark: #111111;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Urrgh – a new, science-led way to tackle mould stains | Free pilot kits</title>
+<meta name="description" content="Urrgh is a bleach-free, two-step kit that loosens and lifts mould stains from painted walls, wallpaper and window frames. Join our UK pilot: up to 1,000 free kits.">
+<link rel="canonical" href="https://urrgh.com/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#BFD730">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Urrgh">
+<meta property="og:locale" content="en_GB">
+<meta property="og:url" content="https://urrgh.com/">
+<meta property="og:title" content="Mould stains? Urrgh. Join our free pilot.">
+<meta property="og:description" content="The new, science-led way to tackle mould stains. Without the yucky bleach. Up to 1,000 free pilot kits in the UK.">
+<meta property="og:image" content="https://urrgh.com/img/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The Urrgh mould stain cleaning kit on a kitchen worktop">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="/fonts/poppins-extrabold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/img/kit.webp" as="image" type="image/webp">
+<style>
+@font-face{font-family:Poppins;font-weight:400;font-style:normal;font-display:swap;src:url(/fonts/poppins-regular.woff2) format("woff2")}
+@font-face{font-family:Poppins;font-weight:400;font-style:italic;font-display:swap;src:url(/fonts/poppins-italic.woff2) format("woff2")}
+@font-face{font-family:Poppins;font-weight:600;font-style:normal;font-display:swap;src:url(/fonts/poppins-semibold.woff2) format("woff2")}
+@font-face{font-family:Poppins;font-weight:700;font-style:normal;font-display:swap;src:url(/fonts/poppins-bold.woff2) format("woff2")}
+@font-face{font-family:Poppins;font-weight:800;font-style:normal;font-display:swap;src:url(/fonts/poppins-extrabold.woff2) format("woff2")}
+:root{--lime:#BFD730;--lime-dark:#8FA322;--lime-pale:#F1F7CF;--yellow:#F4E30F;--pink:#F48FCC;--ink:#231F20;--grey:#4A4A40;--line:#D9D7CE}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;font-family:Poppins,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:#fff;line-height:1.5;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--ink)}
+a:hover{color:#000}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.wrap{max-width:1240px;margin:0 auto;padding:0 24px}
+.btn{display:inline-flex;align-items:center;height:60px;padding:0 30px;border-radius:18px;font-size:18px;font-weight:700;text-decoration:none;background:var(--ink);color:#fff;border:2px solid var(--ink)}
+.btn:hover{color:#fff;background:#000}
+.btn-outline{background:transparent;color:var(--ink);font-weight:600}
+.btn-outline:hover{background:rgba(35,31,32,.08);color:var(--ink)}
+.btn-lime{background:var(--lime);border-color:var(--lime);color:var(--ink)}
+.btn-lime:hover{background:#d0e64a;color:var(--ink)}
+.eyebrow{margin:0;font-size:15px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase}
+h1,h2,h3,h4{margin:0}
+.h2{font-size:clamp(38px,5vw,68px);line-height:1.05;font-weight:800;letter-spacing:-1.5px}
+.h2-sm{font-size:clamp(34px,4.4vw,58px);line-height:1.08;font-weight:800;letter-spacing:-1px}
+section{position:relative}
+.dots{position:absolute;pointer-events:none}
 
-    * {
-      box-sizing: border-box;
-    }
+/* header */
+.site-header{position:sticky;top:0;z-index:10;background:var(--lime)}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:16px;padding-bottom:16px}
+.logo{display:flex;align-items:center;gap:4px;font-size:32px;font-weight:800;letter-spacing:-.5px;color:#fff;text-decoration:none}
+.logo:hover{color:#fff}
+.nav{display:flex;align-items:center;gap:28px;font-size:15px;font-weight:600}
+.nav a{text-decoration:none}
+.nav .cta{background:var(--ink);color:#fff;padding:12px 22px;border-radius:999px}
 
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        sans-serif;
-      background: #ffffff;
-      color: var(--text-dark);
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
+/* hero */
+.hero{background:var(--lime);overflow:hidden}
+.hero .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:40px;padding-top:48px;padding-bottom:72px;position:relative}
+.hero-copy{flex:1 1 500px;min-width:0;display:flex;flex-direction:column;gap:20px}
+.badge{align-self:flex-start;background:var(--yellow);font-size:15px;font-weight:700;letter-spacing:.3px;text-transform:uppercase;padding:10px 20px;border-radius:999px}
+.hero h1{font-size:clamp(46px,5.3vw,78px);line-height:1;font-weight:800;letter-spacing:-2px}
+.hero h1 .w{color:#fff}
+.hero h1 .nb{white-space:nowrap}
+.lede{margin:0;font-size:26px;line-height:1.3;font-weight:700;max-width:560px}
+.sub{margin:0;font-size:18px;max-width:560px}
+.btns{display:flex;flex-wrap:wrap;gap:14px;margin-top:16px}
+.hero-media{flex:1.25 1 560px;min-width:0;display:flex;flex-direction:column;gap:28px}
+.hero-media img{border-radius:32px;box-shadow:0 24px 48px rgba(35,31,32,.18)}
+.claims{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:10px 20px}
+.claims li{display:flex;align-items:center;gap:7px;font-size:16.5px;font-weight:700;white-space:nowrap}
 
-    .page {
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
+/* sections */
+.evidence{padding:112px 0 96px}
+.evidence .wrap,.how .wrap{display:flex;flex-direction:column;gap:24px}
+.evidence .h2 span{color:var(--lime-dark)}
+.evidence p.intro{margin:0;font-size:22px;line-height:1.45;max-width:720px}
+.strip{margin-top:16px}
+.evidence p.swipe{display:none}
+.evidence p.next{margin:0;font-size:18px;font-weight:600}
+.how{padding:32px 0 112px}
+.how .wrap{gap:56px}
+.three{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px}
+.how li{display:flex;flex-direction:column;gap:16px}
+.how li img{width:88px;height:88px}
+.how h3{font-size:34px;font-weight:800}
+.how p{margin:0;font-size:19px}
+.kit{background:var(--lime-pale);padding:112px 0}
+.kit .wrap{display:flex;flex-direction:column;gap:56px}
+.kit .intro{display:flex;flex-direction:column;gap:18px;max-width:760px}
+.kit .intro p{margin:0;font-size:20px}
+.kit .item{display:flex;flex-direction:column;gap:14px}
+.kit .pic{height:220px;display:flex;align-items:center}
+.kit h3{margin-top:12px;font-size:22px;font-weight:800}
+.kit .item p{margin:0;font-size:17px;line-height:1.55}
+.kit .note{margin:0;font-size:16px;line-height:1.6;color:var(--grey);max-width:760px}
+.story{padding:112px 0}
+.story .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:56px}
+.story figure{flex:1.2 1 520px;min-width:0;margin:0;display:flex;flex-direction:column;gap:12px}
+.story figure img{border-radius:28px;transform:rotate(-1.5deg);border:8px solid var(--lime)}
+.story figcaption{font-size:15px;font-weight:600}
+.story .copy{flex:1 1 480px;min-width:0;display:flex;flex-direction:column;gap:20px}
+.story .copy p{margin:0;font-size:20px;line-height:1.6}
+.story .eyebrow{color:var(--lime-dark)}
+.story .kicker{font-size:26px;font-weight:800}
+.story .kicker a{text-decoration:none}
+.pilot{background:var(--yellow);padding:120px 0;overflow:hidden}
+.pilot .inner{max-width:900px;margin:0 auto;padding:0 24px;display:flex;flex-direction:column;gap:22px;position:relative}
+.pilot h2{font-size:clamp(40px,5.4vw,72px);line-height:1.04;font-weight:800;letter-spacing:-1.5px}
+.pilot p{margin:0;font-size:21px;line-height:1.55}
+.pilot .ask{font-size:26px;font-weight:800}
+.pilot .btn{align-self:flex-start;margin-top:6px}
+.pilot .small{margin-top:8px;font-size:15px;line-height:1.65;max-width:760px}
+.partners{background:var(--ink);color:#fff;padding:120px 0}
+.partners .wrap{display:flex;flex-wrap:wrap;gap:56px}
+.partners .head{flex:1 1 520px;min-width:0;display:flex;flex-direction:column;gap:22px}
+.partners .eyebrow{color:var(--lime)}
+.partners .body{flex:1 1 460px;min-width:0;display:flex;flex-direction:column;gap:18px;font-size:18px;line-height:1.6}
+.partners .body p{margin:0}
+.partners .free{font-weight:700;color:var(--lime)}
+.partners .btn{align-self:flex-start;margin-top:8px}
+.faq{padding:112px 0}
+.faq .inner{max-width:960px;margin:0 auto;padding:0 24px;display:flex;flex-direction:column;gap:40px}
+.faq .intro{margin:-16px 0 0;font-size:20px}
+.faq h3{margin-top:16px;font-size:26px;font-weight:800}
+.qs{border-top:2px solid var(--ink)}
+.qs details{border-bottom:1px solid var(--line);padding:22px 0}
+.qs summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+.qs summary::-webkit-details-marker{display:none}
+.qs h4{font-size:19px;font-weight:700}
+.qs .plus{font-size:28px;line-height:1;font-weight:400;transition:transform .2s}
+.qs details[open] .plus{transform:rotate(45deg)}
+.qs .a{margin-top:12px;font-size:17px;line-height:1.65}
+.qs .a p{margin:0 0 10px}
+.qs .a p:last-child{margin:0}
+.site-footer{background:var(--lime);padding:64px 0 48px}
+.site-footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:32px}
+.site-footer .big{font-size:clamp(56px,8vw,112px);font-weight:800;line-height:.9;letter-spacing:-3px;color:#fff}
+.site-footer .legal{font-size:14px;line-height:1.7}
+.site-footer nav{display:flex;flex-wrap:wrap;gap:24px;font-size:15px;font-weight:600}
 
-    /* MOLDS STRIP — CSS BREATHING ANIMATION */
-    .mould-banner {
-      width: 100%;
-      height: min(28vh, 260px); /* never more than 25% of screen */
-      overflow: hidden;
-    }
-
-   .mould-banner img {
-  width: 100%;
-  height: auto;
-  max-height: 28vh;       /* image shrinks if needed, no cropping */
-  display: block;
-  transform-origin: top center;
-  animation: mouldBreath 12s ease-in-out infinite;
+@media (max-width:760px){
+  .nav .nl{display:none}
+  .nav .cta{padding:10px 16px;font-size:14px}
+  .logo{font-size:28px}
+  .three{grid-template-columns:minmax(0,1fr)}
+  .hero .wrap{padding-top:32px}
+  .lede{font-size:22px}
+  .evidence,.kit,.story,.faq{padding:72px 0}
+  .pilot,.partners{padding:80px 0}
+  .how{padding:16px 0 72px}
+  .kit .pic{height:180px}
+  .strip{overflow-x:auto;margin-left:-24px;margin-right:-24px;padding:0 24px}
+  .strip img{width:900px;max-width:none}
+  .btn{height:56px;padding:0 24px;font-size:17px}
 }
-
-
- @keyframes mouldBreath {
-  0% {
-    transform: translateY(0) scale(1);
-    filter: blur(0px);
-    opacity: 0.95;
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.qs .plus{transition:none}}
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://urrgh.com/#org",
+   "name": "Urrgh Ltd",
+   "alternateName": "Urrgh",
+   "url": "https://urrgh.com/",
+   "logo": "https://urrgh.com/logo-white.png",
+   "email": "hello@urrgh.com",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "5 South Charlotte Street",
+    "addressLocality": "Edinburgh",
+    "postalCode": "EH2 4AN",
+    "addressCountry": "GB"
+   },
+   "founder": [
+    {
+     "@type": "Person",
+     "name": "Heleen"
+    },
+    {
+     "@type": "Person",
+     "name": "Tania"
+    }
+   ]
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://urrgh.com/#website",
+   "url": "https://urrgh.com/",
+   "name": "Urrgh",
+   "inLanguage": "en-GB",
+   "publisher": {
+    "@id": "https://urrgh.com/#org"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://urrgh.com/#faq",
+   "url": "https://urrgh.com/",
+   "inLanguage": "en-GB",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Why is Urrgh different?",
+     "url": "https://urrgh.com/#why-urrgh-is-different",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Many conventional mould sprays rely on bleach to tackle the dark pigmentation associated with mould. Urrgh takes a different approach. Our specially developed cleaning formulation is designed to loosen and lift unsightly mould staining so it can be wiped away, without the need for harsh oxidising chemicals.\n\nWe then go a step further with a conditioning wipe that leaves a fine, invisible finish on the cleaned surface."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What's the Step 2 wipe for?",
+     "url": "https://urrgh.com/#step-2-wipe",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "It finishes the job. Our conditioning wipe leaves a fine, invisible film on the cleaned surface, designed to make dust and dirt easier to wipe away and help your walls stay looking cleaner for longer."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How do I clean mould stains without bleach?",
+     "url": "https://urrgh.com/#clean-mould-stains-without-bleach",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Clean the stain wet rather than dry-brushing it, so you don't spread spores. On hard surfaces, the US Environmental Protection Agency recommends <a href=\"https://www.epa.gov/mold/mold-cleanup-your-home\">detergent and water<\/a>, then drying completely. Urrgh's two-step kit is made for painted walls and wallpaper: a cleaning paste that loosens and lifts the stain, then a conditioning wipe to finish. Whatever you use, deal with the damp behind it too."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can I clean mould stains off wallpaper, painted walls or window frames?",
+     "url": "https://urrgh.com/#surfaces",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Urrgh is made for painted walls and ceilings, wallpaper and window frames. It's not intended for tiles, grout, sealant or freshly painted walls. One kit cleans a patch about the size of two sheets of A4."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How long does it take, and what else do I need?",
+     "url": "https://urrgh.com/#what-you-need",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "About 10 minutes, including 5 minutes for the paste to work. You'll need a mug or small bowl, a tablespoon of hot tap water and some kitchen roll. Full step-by-step instructions open when you scan the QR code on your kit."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is it safe?",
+     "url": "https://urrgh.com/#is-it-safe",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Use it as directed and read the instructions and safety information on the pack before you start. Keep the powder away from your eyes and keep the kit out of reach of children. Ingredient and safety information is provided on the pouch."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What about the environment?",
+     "url": "https://urrgh.com/#environment",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Unlike many bleach-based mould cleaning products, which carry warnings about toxicity to aquatic life, our formulations do not require an environmental hazard warning."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What is the pilot, and why is it free?",
+     "url": "https://urrgh.com/#what-is-the-pilot",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "This is a pilot, not a launch. We're giving away up to 1,000 kits to see how Urrgh performs in real homes before it goes on sale. Your photos and answers tell us what works. Nothing is for sale during the pilot."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Who can get a free kit?",
+     "url": "https://urrgh.com/#who-can-apply",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Adults in the UK with a mould stain at home right now. We ask for a photo of your mould when you apply, so we can check the kit suits your surface and send kits to people who need them."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What do I have to do?",
+     "url": "https://urrgh.com/#what-do-i-do",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Scan the QR code on your kit, take a before photo and answer seven quick questions. Clean, take an after photo and, if you like, leave your email so we can check in after 30 days. About 15 minutes in all, with no account or password."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What happens to my details and photos?",
+     "url": "https://urrgh.com/#privacy",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "We delete your name and address once your kit is posted. Photos and answers are filed under your kit code, not your name, and help us improve Urrgh. If you give your email, we keep it for 12 months after your last visit so you can download your record later. Read our <a href=\"/privacy\">privacy notice<\/a>."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "When will Urrgh be on sale?",
+     "url": "https://urrgh.com/#on-sale",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "We plan to launch in 2027. The price isn't set yet."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "My kit hasn't arrived.",
+     "url": "https://urrgh.com/#kit-not-arrived",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Kits usually arrive within two weeks. If yours hasn't, email <a href=\"mailto:hello@urrgh.com\">hello@urrgh.com<\/a>."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What causes mould in my home?",
+     "url": "https://urrgh.com/#what-causes-mould",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Condensation is one of the most common causes. Moisture from cooking, showers, drying clothes and breathing settles on cold surfaces, and mould grows there. Leaks, rain getting in and rising damp can cause it too. (<a href=\"https://www.nhs.uk/common-health-questions/lifestyle/how-do-i-get-rid-of-damp-and-mould/\">NHS<\/a>)"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is it condensation or a leak?",
+     "url": "https://urrgh.com/#condensation-or-leak",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Condensation mould usually shows as clusters of small black dots near cold spots: window frames, corners, behind furniture and on bathroom ceilings. Damp patches with tide marks, or patches that grow after rain, point to a leak, which needs fixing at the source."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is mould bad for my health?",
+     "url": "https://urrgh.com/#health",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Government guidance says damp and mould mainly affect the airways and lungs, and can also affect the eyes and skin. Children, older people and people with lung conditions or weakened immune systems are more at risk. If you're worried, talk to your GP or pharmacist. (<a href=\"https://www.gov.uk/government/publications/damp-and-mould-understanding-and-addressing-the-health-risks-for-rented-housing-providers/understanding-and-addressing-the-health-risks-of-damp-and-mould-in-the-home--2\">GOV.UK<\/a>)"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How do I stop condensation?",
+     "url": "https://urrgh.com/#stop-condensation",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Put lids on pans and use the extractor fan when cooking or showering. Open a window for a while afterwards and keep trickle vents open. Dry clothes outside or in a vented dryer rather than on radiators. Keep your home steadily warm, leave a gap between furniture and outside walls, and wipe condensation off windows in the morning. A dehumidifier helps in small flats. (<a href=\"https://energysavingtrust.org.uk/advice/fixing-damp-and-condensation\">Energy Saving Trust<\/a>)"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can bleach damage painted walls?",
+     "url": "https://urrgh.com/#bleach-damage",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "It can. Bleach can discolour or damage wallpaper and some paints, and its fumes are unpleasant in a small room. If you use it, follow the label and never mix it with other cleaners."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How do I remove mould stains without damaging painted walls?",
+     "url": "https://urrgh.com/#without-damaging-walls",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Go gently: no scouring pads or hard scrubbing, and don't dry-brush the mould. Use a product made for painted surfaces, follow the instructions, and leave freshly painted walls alone until the paint has fully cured. Urrgh's paste goes on with a soft sponge brush and comes off with kitchen roll."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What alternatives are there to bleach-based mould cleaners?",
+     "url": "https://urrgh.com/#alternatives-to-bleach",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "For hard surfaces, plain detergent and water works for routine mould cleaning, and the US EPA does not recommend bleach as a routine practice (<a href=\"https://www.epa.gov/mold/brief-guide-mold-moisture-and-your-home\">EPA<\/a>). There are also bleach-free cleaners made for walls, like Urrgh. Whichever you choose, the damp causing the mould needs dealing with too."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can I just paint over it?",
+     "url": "https://urrgh.com/#painting-over-mould",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Not on its own. Paint applied over mouldy surfaces is likely to peel (<a href=\"https://www.epa.gov/mold/brief-guide-mold-moisture-and-your-home\">EPA<\/a>). Clean it first, let the wall dry, and fix the damp."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How do I clean mould stains in a rented property?",
+     "url": "https://urrgh.com/#renting",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Report the mould to your landlord or letting agent in writing first, and photograph it before you clean. Small, isolated stains may be suitable for cleaning, depending on the surface and underlying cause. Cleaning doesn't replace your landlord's responsibility to find and fix the cause."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How can tenants document mould problems?",
+     "url": "https://urrgh.com/#document-mould",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Take dated photos, one wide shot to show where it is and one close-up, and repeat them if it comes back. Keep copies of every report and reply. Pilot participants also get a downloadable before-and-after record from Urrgh."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "I rent. Whose job is it to fix the cause?",
+     "url": "https://urrgh.com/#whose-job",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Usually your landlord's, where the building causes it. The rules differ across the UK:\n\n<strong>Scotland:<\/strong> since 6 October 2026, social and private landlords must investigate reports of damp or mould within 10 working days (<a href=\"https://www.gov.scot/publications/awaabs-law-guidance-tenants-scotland/\">gov.scot<\/a>).\n\n<strong>England:<\/strong> since 27 October 2025, social landlords must deal with significant damp and mould within fixed timescales under Awaab's Law (<a href=\"https://www.gov.uk/government/publications/awaabs-law-guidance-for-social-landlords\">GOV.UK<\/a>). Private renters can ask their council to inspect.\n\nWales and Northern Ireland have their own rules. Shelter, Shelter Scotland, Shelter Cymru and Housing Advice NI give free advice."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How can landlords manage minor mould complaints?",
+     "url": "https://urrgh.com/#landlords-minor-complaints",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Respond quickly, look for the cause rather than just the stain, and keep clear records with photos and dates. Government guidance stresses that advice to tenants must never replace dealing with the underlying causes. Urrgh is designed to sit alongside that process. <a href=\"#partners\">Talk to us about the pilot<\/a>."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "When is it too much to tackle myself?",
+     "url": "https://urrgh.com/#too-big",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "If the mould covers a large area, keeps coming back, comes from a leak, or anyone at home has a lung condition, don't just clean it. Report it to your landlord or get professional advice."
+     }
+    }
+   ]
   }
-  50% {
-    transform: translateY(6px) scale(1.04);
-    filter: blur(0.4px);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(0) scale(1);
-    filter: blur(0px);
-    opacity: 0.95;
-  }
+ ]
 }
-
-
-    .content {
-      flex: 1;
-      padding: 32px 20px 40px;
-      max-width: 640px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .urrgh-logo {
-      display: block;
-      width: min(100%, 430px);
-      height: auto;
-      margin: 0 auto 8px;
-      transform: translateX(0.6em);
-    }
-
-    h2 {
-      margin: 0 0 4px;
-      font-size: 1.3rem;
-      font-weight: 600;
-    }
-
-    .coming-soon {
-      margin: 4px 0 16px;
-      font-size: 1.1rem;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-    }
-
-    .tagline {
-      margin: 0 0 20px;
-      font-size: 1.05rem;
-      font-weight: 600;
-    }
-
-    .ew-badge {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      margin-left: 4px;
-      padding: 0.1em 0.7em;
-      border-radius: 999px;
-      background: var(--urrgh-pink);
-      color: #ffffff;
-      font-weight: 700;
-      font-size: 0.95em;
-    }
-
-    .subcopy {
-      margin: 0 0 28px;
-      font-size: 0.98rem;
-      line-height: 1.5;
-    }
-
-    .cta-button {
-      display: inline-block;
-      padding: 0.9em 2.2em;
-      border-radius: 999px;
-      border: none;
-      background: #C4D600;
-      color: #ffffff;
-      font-size: 1rem;
-      font-weight: 700;
-      text-decoration: none;
-      cursor: pointer;
-      box-shadow: none;
-      transition: transform 0.12s ease, box-shadow 0.12s ease,
-        background 0.12s ease;
-    }
-
-    .cta-button:hover,
-    .cta-button:focus-visible {
-      transform: translateY(-1px);
-      box-shadow: none;
-      background: #B4C400;
-    }
-
-    .cta-button:active {
-      transform: translateY(1px);
-      box-shadow: none;
-    }
-
-    .footer {
-      text-align: center;
-      padding: 0 16px 18px;
-      font-size: 0.8rem;
-      color: #777777;
-    }
-  </style>
+</script>
 </head>
 <body>
-  <div class="page">
-    <!-- TOP MOULD STRIP -->
-    <div class="mould-banner">
-      <img src="mould-header.jpg" alt="Mould blooming from ceiling" />
-    </div>
 
-    <!-- MAIN CONTENT -->
-    <main class="content">
-      <img class="urrgh-logo" src="Urrgh-logo-green.png" alt="Urrgh" />
-      <h2>The Mould Stuff<sup>™</sup>.</h2>
-      <div class="coming-soon">COMING SOON</div>
+<header class="site-header">
+<div class="wrap">
+<a class="logo" href="#top" aria-label="Urrgh home">Urrgh<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1c1.2 6.5 4.5 9.8 11 11-6.5 1.2-9.8 4.5-11 11-1.2-6.5-4.5-9.8-11-11 6.5-1.2 9.8-4.5 11-11z" fill="#fff"/></svg></a>
+<nav class="nav" aria-label="Main">
+<a class="nl" href="#how">How it works</a>
+<a class="nl" href="#pilot">The pilot</a>
+<a class="nl" href="#partners">Landlords</a>
+<a class="nl" href="#faq">FAQs</a>
+<a class="cta" href="/free">Get your free pilot kit</a>
+</nav>
+</div>
+</header>
 
-      <p class="tagline">
-        Because stains are
-        <span class="ew-badge">ew.</span>
-      </p>
+<main>
+<section id="top" class="hero">
+<svg class="dots" width="320" height="260" viewBox="0 0 320 260" aria-hidden="true" style="left:-40px;top:-40px"><g fill="#231F20"><circle cx="40" cy="40" r="14"/><circle cx="80" cy="30" r="9"/><circle cx="70" cy="70" r="11"/><circle cx="110" cy="55" r="6"/><circle cx="30" cy="95" r="8"/><circle cx="100" cy="95" r="5"/><circle cx="140" cy="35" r="4"/><circle cx="60" cy="125" r="5"/><circle cx="20" cy="150" r="9"/><circle cx="130" cy="80" r="3"/><circle cx="45" cy="175" r="4"/></g></svg>
+<svg class="dots" width="280" height="220" viewBox="0 0 280 220" aria-hidden="true" style="right:-30px;bottom:-20px"><g fill="#231F20"><circle cx="240" cy="180" r="15"/><circle cx="200" cy="195" r="9"/><circle cx="250" cy="130" r="10"/><circle cx="205" cy="150" r="6"/><circle cx="160" cy="190" r="5"/><circle cx="255" cy="90" r="5"/><circle cx="170" cy="155" r="3"/><circle cx="215" cy="110" r="4"/></g></svg>
+<div class="wrap">
+<div class="hero-copy">
+<span class="badge">Join our pilot · 1,000 free kits up for grabs</span>
+<h1><span class="nb">Mould stains?</span><br><span class="w">Urrgh.</span></h1>
+<p class="lede">The new, science-led way to tackle mould stains. Without the yucky bleach.</p>
+<p class="sub">We're putting Urrgh to the test in real homes. Fancy giving it a go?</p>
+<div class="btns">
+<a class="btn" href="/free">Get your free pilot kit</a>
+<a class="btn btn-outline" href="#partners">Landlords &amp; agents</a>
+</div>
+</div>
+<div class="hero-media">
+<img src="/img/kit.webp" width="1802" height="1078" fetchpriority="high" alt="The Urrgh mould stain cleaning kit on a kitchen worktop: the pouch, a Step 1 cleaning powder sachet, a Step 2 conditioning wipe sachet and a sponge brush">
+<ul class="claims" aria-label="Why Urrgh">
+<li><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1c1.2 6.5 4.5 9.8 11 11-6.5 1.2-9.8 4.5-11 11-1.2-6.5-4.5-9.8-11-11 6.5-1.2 9.8-4.5 11-11z" fill="#fff"/></svg>Gentler by design</li>
+<li><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1c1.2 6.5 4.5 9.8 11 11-6.5 1.2-9.8 4.5-11 11-1.2-6.5-4.5-9.8-11-11 6.5-1.2 9.8-4.5 11-11z" fill="#fff"/></svg>Deposit-friendly</li>
+<li><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1c1.2 6.5 4.5 9.8 11 11-6.5 1.2-9.8 4.5-11 11-1.2-6.5-4.5-9.8-11-11 6.5-1.2 9.8-4.5 11-11z" fill="#fff"/></svg>Small kit, big difference</li>
+</ul>
+</div>
+</div>
+</section>
 
-      <p class="subcopy">
-        A safe, science-led way to clean mould stains without wrecking your walls or
-        your deposit.
-      </p>
+<section class="evidence" aria-labelledby="evidence-h">
+<div class="wrap">
+<h2 id="evidence-h" class="h2">Real Results.<br><span>Real Evidence.</span></h2>
+<p class="intro">Seeing is believing. Here's what happened when we put Urrgh to work in a real bathroom.</p>
+<div class="strip" tabindex="0" role="region" aria-label="Before, during and after photos (scroll sideways on small screens)"><img src="/img/before-during-after.webp" width="1984" height="580" loading="lazy" alt="Three photos of a bathroom wall by an extractor fan: before, with black mould spots; during, with the green Urrgh cleaning paste applied; and after, with the stains cleaned away"></div>
+<p class="next">Next up: your walls. We can't wait to share before-and-afters from our pilot here.</p>
+</div>
+</section>
 
-      <!-- CTA: opens prefilled email to heleen@urrgh.com -->
-      <a
-        class="cta-button"
-        href="mailto:heleen@urrgh.com?subject=I%20want%20to%20know%20about%20Urrgh&body=Hi%20Urrgh%20team%2C%0D%0A%0D%0APlease%20let%20me%20know%20when%20Urrgh%20%E2%80%93%20The%20Mould%20Stuff%20launches.%0D%0A%0D%0AI%20understand%20you%27ll%20retain%20this%20email%20address%20to%20send%20me%20a%20note%20when%20it%20drops.%0D%0A%0D%0AThanks!"
-      >
-        Find out when it drops
-      </a>
-    </main>
+<section id="how" class="how" aria-labelledby="how-h">
+<div class="wrap">
+<h2 id="how-h" class="h2">How it works</h2>
+<ol class="three">
+<li><img src="/img/snap-it.png" width="361" height="361" loading="lazy" alt=""><h3>Snap it.</h3><p>Scan your kit's QR code and take a quick photo of the ugly stuff.</p></li>
+<li><img src="/img/clean-it.png" width="361" height="361" loading="lazy" alt=""><h3>Clean it.</h3><p>A little clever chemistry and a two-step clean.</p></li>
+<li><img src="/img/track-it.png" width="361" height="361" loading="lazy" alt=""><h3>Track it.</h3><p>Capture the difference. We'll check in again after 30 days.</p></li>
+</ol>
+</div>
+</section>
 
-    <footer class="footer">
-      &copy; <span id="year"></span> Urrgh Ltd · <a href="/privacy" style="color:inherit">Privacy</a> · <a href="/pilot-terms" style="color:inherit">Pilot terms</a>
-    </footer>
-  </div>
+<section class="kit" aria-labelledby="kit-h">
+<div class="wrap">
+<div class="intro">
+<h2 id="kit-h" class="h2-sm">A small, mailable kit.</h2>
+<p>Two specially developed formulations that work together. No yucky bleach.</p>
+</div>
+<div class="three">
+<div class="item"><div class="pic"><img src="/img/step1.png" width="458" height="482" loading="lazy" alt="Urrgh Step 1 cleaning powder sachet" style="width:190px;transform:rotate(-4deg)"></div><h3>Step 1 – The cleaning stuff</h3><p>Specially formulated to loosen and lift unsightly mould stains.</p></div>
+<div class="item"><div class="pic"><img src="/img/brush.png" width="215" height="540" loading="lazy" alt="Urrgh sponge brush" style="width:78px;transform:rotate(-12deg);margin-left:56px"></div><h3>One handy brush</h3><p>A soft sponge brush to spread the paste over the stain.</p></div>
+<div class="item"><div class="pic"><img src="/img/step2.png" width="457" height="482" loading="lazy" alt="Urrgh Step 2 conditioning wipe sachet" style="width:190px;transform:rotate(3deg)"></div><h3>Step 2 – The finishing touch</h3><p>A conditioning wipe that leaves a fine, invisible finish on your freshly cleaned surface.</p></div>
+</div>
+<p class="note">For painted walls and ceilings, wallpaper and window frames. One kit cleans a patch about the size of two sheets of A4. Not intended for tiles, grout, sealant or freshly painted walls.</p>
+</div>
+</section>
 
-  <script>
-    // Keep footer year current
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+<section id="story" class="story" aria-labelledby="story-h">
+<div class="wrap">
+<figure>
+<img src="/img/founders.webp" width="976" height="540" loading="lazy" alt="Urrgh co-founder Heleen testing formulations at her kitchen counter, and co-founder Tania surrounded by cleaning cloths and samples at her dining table">
+<figcaption>Heleen and Tania, co-founders, hard at work creating</figcaption>
+</figure>
+<div class="copy">
+<p class="eyebrow">Our story</p>
+<h2 id="story-h" class="h2-sm">It started with an ‘Urrgh’.</h2>
+<p>When Heleen's daughter's landlord decided to paint over the mould in her student house, she thought there had to be a better way.</p>
+<p>A chemistry graduate who started her career making Fairy Liquid, Heleen teamed up with fellow consultant Tania and roped in Adam, a formulation chemist.</p>
+<p>Months of clever chemistry and kitchen-table experimentation later, Urrgh was born.</p>
+<p class="kicker"><a href="#pilot">And now we'd love you to try it.</a></p>
+</div>
+</div>
+</section>
+
+<section id="pilot" class="pilot" aria-labelledby="pilot-h">
+<svg class="dots" width="120" height="120" viewBox="0 0 24 24" aria-hidden="true" style="right:8%;top:64px"><path d="M12 1c1.2 6.5 4.5 9.8 11 11-6.5 1.2-9.8 4.5-11 11-1.2-6.5-4.5-9.8-11-11 6.5-1.2 9.8-4.5 11-11z" fill="#fff"/></svg>
+<svg class="dots" width="56" height="56" viewBox="0 0 24 24" aria-hidden="true" style="right:18%;top:170px"><path d="M12 1c1.2 6.5 4.5 9.8 11 11-6.5 1.2-9.8 4.5-11 11-1.2-6.5-4.5-9.8-11-11 6.5-1.2 9.8-4.5 11-11z" fill="#fff"/></svg>
+<div class="inner">
+<h2 id="pilot-h">Help us make mould a little less Urrgh.</h2>
+<p>We've done the science. We've done the testing. Now it's time to see how Urrgh performs in real homes.</p>
+<p>We're giving away up to 1,000 kits, completely free, including postage. All we ask in return is a few photos and a little feedback.</p>
+<p>No catch. Just a small British start-up trying to do things differently.</p>
+<p class="ask">Fancy being part of it?</p>
+<a class="btn" href="/free">Get your free pilot kit</a>
+<p class="small">For adults in the UK with a mould stain at home right now. You'll need to upload a photo of your mould when you apply. You'll get a dated before-and-after record you can download and keep. By applying you agree to our <a href="/pilot-terms">pilot terms</a> and <a href="/privacy">privacy notice</a>.</p>
+</div>
+</section>
+
+<section id="partners" class="partners" aria-labelledby="partners-h">
+<div class="wrap">
+<div class="head">
+<p class="eyebrow">For housing providers</p>
+<h2 id="partners-h" class="h2-sm">A small kit. A smarter first response to mould complaints.</h2>
+</div>
+<div class="body">
+<p>Urrgh combines a tenant-friendly cleaning kit with photographic evidence and a 30-day follow-up.</p>
+<p>With new regulatory requirements around damp and mould, there's never been a better time to explore different approaches.</p>
+<p>We're inviting housing associations, landlords, letting agents, student accommodation providers and student unions to join our pilot.</p>
+<p>We want to understand how you manage mould complaints today and explore together how Urrgh could complement your existing processes.</p>
+<p class="free">Pilot kits are completely free.</p>
+<a class="btn btn-lime" href="mailto:hello@urrgh.com?subject=Let%27s%20talk">Let's talk</a>
+</div>
+</div>
+</section>
+
+<section id="faq" class="faq" aria-labelledby="faq-h">
+<div class="inner">
+<h2 id="faq-h" class="h2">The mould lowdown.</h2>
+<p class="intro">Everything you wanted to know about Urrgh, our pilot and mould at home.</p>
+
+<h3>About Urrgh and the pilot</h3>
+<div class="qs">
+<details id="why-urrgh-is-different"><summary><h4>Why is Urrgh different?</h4><span class="plus" aria-hidden="true">+</span></summary><div class="a"><p>Many conventional mould sprays rely on bleach to tackle the dark pigmentation associated with mould. Urrgh takes a different approach. Our specially developed cleaning formulation is designed to loosen and lift unsightly mould staining so it can be wiped away, without the need for harsh oxidising chemicals.</p><p>We then go a step further with a conditioning wipe that leaves a fine, invisible finish on the cleaned surface.</p></div></details>
+<details id="step-2-wipe"><summary><h4>What's the Step 2 wipe for?</h4><span class="plus" aria-hidden="true">+</span></summary><div class="a"><p>It finishes the job. Our conditioning wipe leaves a fine, invisible film on the cleaned surface, designed to make dust and dirt easier to wipe away and help your walls stay looking cleaner for longer.</p></div></details>
+<details id="clean-mould-stains-without-bleach"><summary><h4>How do I clean mould stains without bleach?</h4><span class="plus" aria-hidden="true">+</span></summary><div class="a"><p>Clean the stain wet rather than dry-brushing it, so you don't spread spores. On hard surfaces, the US Environmental Protection Agency recommends <a href="https://www.epa.gov/mold/mold-cleanup-your-home">detergent and water</a>, then drying completely. Urrgh's two-step kit is made for painted walls and wallpaper: a cleaning paste that loosens and lifts the stain, then a conditioning wipe to finish. Whatever you use, deal with the damp behind it too.</p></div></details>
+<details id="surfaces"><summary><h4>Can I clean mould stains off wallpaper, painted walls or window frames?</h4><span class="plus" aria-hidden="true">+</span></summary><div class="a"><p>Yes. Urrgh is made for painted walls and ceilings, wallpaper and window frames. It's not intended for tiles, grout, sealant or freshly painted walls. One kit cleans a patch about the size of two sheets of A4.</p></div></details>
+<details id="what-you-need"><summary><h4>How long does it take, and what else do I need?</h4><span class="plus" aria-hidden="true">+</span></summary><div class="a"><p>About 10 minutes, including 5 minutes for the paste to work. You'll need a mug or small bowl, a tablespoon of hot tap water and some kitchen roll. Full step-by-step instructions open when you scan the QR code on your kit.</p></div></details>
+<details id="is-it-safe"><summary><h4>Is it safe?</h4><span class="plus" aria-hidden="true">+</span></summary><div class="a"><p>Use it as directed and read the instructions and safety information on the pack before you start. Keep the powder away from your eyes and keep the kit out of reach of children. Ingredient and safety information is provided on the pouch.</p></div></details>
+<details id="environment"><summary><h4>What about the environment?</h4><span class="plus" aria-hidden="true">+</span></summary><div class="a"><p>Unlike many bleach-based mould cleaning products, which carry warnings about toxicity to aquatic life, our formulations do not require an environmental hazard warning.</p></div></details>
+<details id="what-is-the-pilot"><summary><h4>What is the pilot, and why is it free?</h4><span class="plus" aria-hidden="true">+</span></summary><div class="a"><p>This is a pilot, not a launch. We're giving away up to 1,000 kits to see how Urrgh performs in real homes before it goes on sale. Your photos and answers tell us what works. Nothing is for sale during the pilot.</p></div></details>
+<details id="who-can-apply"><summary><h4>Who can get a free kit?</h4><span class="plus" aria-hidden="true">+</span></summary><div class="a"><p>Adults in the UK with a mould stain at home right now. We ask for a photo of your mould when you apply, so we can check the kit suits your surface and send kits to people who need them.</p></div></details>
+<details id="what-do-i-do"><summary><h4>What do I have to do?</h4><span class="plus" aria-hidden="true">+</span></summary><div class="a"><p>Scan the QR code on your kit, take a before photo and answer seven quick questions. Clean, take an after photo and, if you like, leave your email so we can check in after 30 days. About 15 minutes in all, with no account or password.</p></div></details>
+<details id="privacy"><summary><h4>What happens to my details and photos?</h4><span class="plus" aria-hidden="true">+</span></summary><div class="a"><p>We delete your name and address once your kit is posted. Photos and answers are filed under your kit code, not your name, and help us improve Urrgh. If you give your email, we keep it for 12 months after your last visit so you can download your record later. Read our <a href="/privacy">privacy notice</a>.</p></div></details>
+<details id="on-sale"><summary><h4>When will Urrgh be on sale?</h4><span class="plus" aria-hidden="true">+</span></summary><div class="a"><p>We plan to launch in 2027. The price isn't set yet.</p></div></details>
+<details id="kit-not-arrived"><summary><h4>My kit hasn't arrived.</h4><span class="plus" aria-hidden="true">+</span></summary><div class="a"><p>Kits usually arrive within two weeks. If yours hasn't, email <a href="mailto:hello@urrgh.com">hello@urrgh.com</a>.</p></div></details>
+</div>
+
+<h3>Mould at home</h3>
+<div class="qs">
+<details id="what-causes-mould"><summary><h4>What causes mould in my home?</h4><span class="plus" aria-hidden="true">+</span></summary><div class="a"><p>Condensation is one of the most common causes. Moisture from cooking, showers, drying clothes and breathing settles on cold surfaces, and mould grows there. Leaks, rain getting in and rising damp can cause it too. (<a href="https://www.nhs.uk/common-health-questions/lifestyle/how-do-i-get-rid-of-damp-and-mould/">NHS</a>)</p></div></details>
+<details id="condensation-or-leak"><summary><h4>Is it condensation or a leak?</h4><span class="plus" aria-hidden="true">+</span></summary><div class="a"><p>Condensation mould usually shows as clusters of small black dots near cold spots: window frames, corners, behind furniture and on bathroom ceilings. Damp patches with tide marks, or patches that grow after rain, point to a leak, which needs fixing at the source.</p></div></details>
+<details id="health"><summary><h4>Is mould bad for my health?</h4><span class="plus" aria-hidden="true">+</span></summary><div class="a"><p>Government guidance says damp and mould mainly affect the airways and lungs, and can also affect the eyes and skin. Children, older people and people with lung conditions or weakened immune systems are more at risk. If you're worried, talk to your GP or pharmacist. (<a href="https://www.gov.uk/government/publications/damp-and-mould-understanding-and-addressing-the-health-risks-for-rented-housing-providers/understanding-and-addressing-the-health-risks-of-damp-and-mould-in-the-home--2">GOV.UK</a>)</p></div></details>
+<details id="stop-condensation"><summary><h4>How do I stop condensation?</h4><span class="plus" aria-hidden="true">+</span></summary><div class="a"><p>Put lids on pans and use the extractor fan when cooking or showering. Open a window for a while afterwards and keep trickle vents open. Dry clothes outside or in a vented dryer rather than on radiators. Keep your home steadily warm, leave a gap between furniture and outside walls, and wipe condensation off windows in the morning. A dehumidifier helps in small flats. (<a href="https://energysavingtrust.org.uk/advice/fixing-damp-and-condensation">Energy Saving Trust</a>)</p></div></details>
+<details id="bleach-damage"><summary><h4>Can bleach damage painted walls?</h4><span class="plus" aria-hidden="true">+</span></summary><div class="a"><p>It can. Bleach can discolour or damage wallpaper and some paints, and its fumes are unpleasant in a small room. If you use it, follow the label and never mix it with other cleaners.</p></div></details>
+<details id="without-damaging-walls"><summary><h4>How do I remove mould stains without damaging painted walls?</h4><span class="plus" aria-hidden="true">+</span></summary><div class="a"><p>Go gently: no scouring pads or hard scrubbing, and don't dry-brush the mould. Use a product made for painted surfaces, follow the instructions, and leave freshly painted walls alone until the paint has fully cured. Urrgh's paste goes on with a soft sponge brush and comes off with kitchen roll.</p></div></details>
+<details id="alternatives-to-bleach"><summary><h4>What alternatives are there to bleach-based mould cleaners?</h4><span class="plus" aria-hidden="true">+</span></summary><div class="a"><p>For hard surfaces, plain detergent and water works for routine mould cleaning, and the US EPA does not recommend bleach as a routine practice (<a href="https://www.epa.gov/mold/brief-guide-mold-moisture-and-your-home">EPA</a>). There are also bleach-free cleaners made for walls, like Urrgh. Whichever you choose, the damp causing the mould needs dealing with too.</p></div></details>
+<details id="painting-over-mould"><summary><h4>Can I just paint over it?</h4><span class="plus" aria-hidden="true">+</span></summary><div class="a"><p>Not on its own. Paint applied over mouldy surfaces is likely to peel (<a href="https://www.epa.gov/mold/brief-guide-mold-moisture-and-your-home">EPA</a>). Clean it first, let the wall dry, and fix the damp.</p></div></details>
+<details id="renting"><summary><h4>How do I clean mould stains in a rented property?</h4><span class="plus" aria-hidden="true">+</span></summary><div class="a"><p>Report the mould to your landlord or letting agent in writing first, and photograph it before you clean. Small, isolated stains may be suitable for cleaning, depending on the surface and underlying cause. Cleaning doesn't replace your landlord's responsibility to find and fix the cause.</p></div></details>
+<details id="document-mould"><summary><h4>How can tenants document mould problems?</h4><span class="plus" aria-hidden="true">+</span></summary><div class="a"><p>Take dated photos, one wide shot to show where it is and one close-up, and repeat them if it comes back. Keep copies of every report and reply. Pilot participants also get a downloadable before-and-after record from Urrgh.</p></div></details>
+<details id="whose-job"><summary><h4>I rent. Whose job is it to fix the cause?</h4><span class="plus" aria-hidden="true">+</span></summary><div class="a"><p>Usually your landlord's, where the building causes it. The rules differ across the UK:</p><p><strong>Scotland:</strong> since 6 October 2026, social and private landlords must investigate reports of damp or mould within 10 working days (<a href="https://www.gov.scot/publications/awaabs-law-guidance-tenants-scotland/">gov.scot</a>).</p><p><strong>England:</strong> since 27 October 2025, social landlords must deal with significant damp and mould within fixed timescales under Awaab's Law (<a href="https://www.gov.uk/government/publications/awaabs-law-guidance-for-social-landlords">GOV.UK</a>). Private renters can ask their council to inspect.</p><p>Wales and Northern Ireland have their own rules. Shelter, Shelter Scotland, Shelter Cymru and Housing Advice NI give free advice.</p></div></details>
+<details id="landlords-minor-complaints"><summary><h4>How can landlords manage minor mould complaints?</h4><span class="plus" aria-hidden="true">+</span></summary><div class="a"><p>Respond quickly, look for the cause rather than just the stain, and keep clear records with photos and dates. Government guidance stresses that advice to tenants must never replace dealing with the underlying causes. Urrgh is designed to sit alongside that process. <a href="#partners">Talk to us about the pilot</a>.</p></div></details>
+<details id="too-big"><summary><h4>When is it too much to tackle myself?</h4><span class="plus" aria-hidden="true">+</span></summary><div class="a"><p>If the mould covers a large area, keeps coming back, comes from a leak, or anyone at home has a lung condition, don't just clean it. Report it to your landlord or get professional advice.</p></div></details>
+</div>
+</div>
+</section>
+</main>
+
+<footer class="site-footer">
+<div class="wrap">
+<div>
+<p class="big" aria-hidden="true" style="margin:0 0 10px">Urrgh.</p>
+<p class="legal" style="margin:0">Urrgh Ltd, registered in Scotland SC871203<br>5 South Charlotte Street, Edinburgh EH2 4AN · ICO ZC310026</p>
+</div>
+<nav aria-label="Footer">
+<a href="mailto:hello@urrgh.com">hello@urrgh.com</a>
+<a href="/privacy">Privacy</a>
+<a href="/pilot-terms">Pilot terms</a>
+</nav>
+</div>
+</footer>
+
+<script>
+// Open a FAQ when its link (#question-id) is visited, and keep the address bar in step when one is opened.
+(function(){
+  function openFromHash(){
+    var id=decodeURIComponent(location.hash.slice(1));
+    if(!id) return;
+    var el=document.getElementById(id);
+    if(el && el.tagName==='DETAILS'){ el.open=true; el.scrollIntoView(); }
+  }
+  window.addEventListener('hashchange',openFromHash);
+  openFromHash();
+  document.querySelectorAll('.qs details').forEach(function(d){
+    d.addEventListener('toggle',function(){ if(d.open && history.replaceState) history.replaceState(null,'','#'+d.id); });
+  });
+})();
+</script>
 </body>
 </html>
