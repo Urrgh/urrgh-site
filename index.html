@@ -37,25 +37,25 @@ a{color:var(--ink)}
 a:hover{color:#000}
 :focus-visible{outline:3px solid var(--ink);outline-offset:3px}
 .wrap{max-width:1240px;margin:0 auto;padding:0 24px}
-.btn{display:inline-flex;align-items:center;height:60px;padding:0 30px;border-radius:18px;font-size:18px;font-weight:700;text-decoration:none;background:var(--ink);color:#fff;border:2px solid var(--ink)}
+.btn{display:inline-flex;align-items:center;height:60px;padding:0 30px;border-radius:18px;font-size:1.125rem;font-weight:700;text-decoration:none;background:var(--ink);color:#fff;border:2px solid var(--ink)}
 .btn:hover{color:#fff;background:#000}
 .btn-outline{background:transparent;color:var(--ink);font-weight:600}
 .btn-outline:hover{background:rgba(35,31,32,.08);color:var(--ink)}
 .btn-lime{background:var(--lime);border-color:var(--lime);color:var(--ink)}
 .btn-lime:hover{background:#d0e64a;color:var(--ink)}
-.eyebrow{margin:0;font-size:15px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase}
+.eyebrow{margin:0;font-size:0.9375rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase}
 h1,h2,h3,h4{margin:0}
-.h2{font-size:clamp(38px,5vw,68px);line-height:1.05;font-weight:800;letter-spacing:-1.5px}
-.h2-sm{font-size:clamp(34px,4.4vw,58px);line-height:1.08;font-weight:800;letter-spacing:-1px}
+.h2{font-size:clamp(2.375rem,5vw,4.25rem);line-height:1.05;font-weight:800;letter-spacing:-1.5px}
+.h2-sm{font-size:clamp(2.125rem,4.4vw,3.625rem);line-height:1.08;font-weight:800;letter-spacing:-1px}
 section{position:relative}
 .dots{position:absolute;pointer-events:none}
 
 /* header */
 .site-header{position:sticky;top:0;z-index:10;background:var(--lime)}
 .site-header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:16px;padding-bottom:16px}
-.logo{display:flex;align-items:center;gap:4px;font-size:32px;font-weight:800;letter-spacing:-.5px;color:#fff;text-decoration:none}
+.logo{display:flex;align-items:center;gap:4px;font-size:2rem;font-weight:800;letter-spacing:-.5px;color:#fff;text-decoration:none}
 .logo:hover{color:#fff}
-.nav{display:flex;align-items:center;gap:28px;font-size:15px;font-weight:600}
+.nav{display:flex;align-items:center;gap:28px;font-size:0.9375rem;font-weight:600}
 .nav a{text-decoration:none}
 .nav .cta{background:var(--ink);color:#fff;padding:12px 22px;border-radius:999px}
 
@@ -63,101 +63,102 @@ section{position:relative}
 .hero{background:var(--lime);overflow:hidden}
 .hero .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:40px;padding-top:48px;padding-bottom:72px;position:relative}
 .hero-copy{flex:1 1 500px;min-width:0;display:flex;flex-direction:column;gap:20px}
-.badge{align-self:flex-start;background:var(--yellow);font-size:15px;font-weight:700;letter-spacing:.3px;text-transform:uppercase;padding:10px 20px;border-radius:999px}
-.hero h1{font-size:clamp(46px,5.3vw,78px);line-height:1;font-weight:800;letter-spacing:-2px}
+.badge{align-self:flex-start;background:var(--yellow);font-size:0.9375rem;font-weight:700;letter-spacing:.3px;text-transform:uppercase;padding:10px 20px;border-radius:999px}
+.hero h1{font-size:clamp(2.875rem,5.3vw,4.875rem);line-height:1;font-weight:800;letter-spacing:-2px}
 .hero h1 .w{color:#fff}
 .hero h1 .nb{white-space:nowrap}
-.lede{margin:0;font-size:26px;line-height:1.3;font-weight:700;max-width:560px}
-.sub{margin:0;font-size:18px;max-width:560px}
+.lede{margin:0;font-size:1.625rem;line-height:1.3;font-weight:700;max-width:560px}
+.sub{margin:0;font-size:1.125rem;max-width:560px}
 .btns{display:flex;flex-wrap:wrap;gap:14px;margin-top:16px}
 .hero-media{flex:1.25 1 560px;min-width:0;display:flex;flex-direction:column;gap:28px}
 .hero-media img{border-radius:32px;box-shadow:0 24px 48px rgba(35,31,32,.18)}
 .claims{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:10px 20px}
-.claims li{display:flex;align-items:center;gap:7px;font-size:16.5px;font-weight:700;white-space:nowrap}
+.claims li{display:flex;align-items:center;gap:7px;font-size:1.0312rem;font-weight:700;white-space:nowrap}
 
 /* sections */
 .evidence{padding:112px 0 96px}
 .evidence .wrap,.how .wrap{display:flex;flex-direction:column;gap:24px}
 .evidence .h2 span{color:var(--lime-dark)}
-.evidence p.intro{margin:0;font-size:22px;line-height:1.45;max-width:720px}
+.evidence p.intro{margin:0;font-size:1.375rem;line-height:1.45;max-width:720px}
 .strip{margin-top:16px}
 .evidence p.swipe{display:none}
-.evidence p.next{margin:0;font-size:18px;font-weight:600}
+.evidence p.next{margin:0;font-size:1.125rem;font-weight:600}
 .how{padding:32px 0 112px}
 .how .wrap{gap:56px}
 .three{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px}
 .how li{display:flex;flex-direction:column;gap:16px}
 .how li img{width:88px;height:88px}
-.how h3{font-size:34px;font-weight:800}
-.how p{margin:0;font-size:19px}
+.how h3{font-size:2.125rem;font-weight:800}
+.how p{margin:0;font-size:1.1875rem}
 .kit{background:var(--lime-pale);padding:112px 0}
 .kit .wrap{display:flex;flex-direction:column;gap:56px}
 .kit .intro{display:flex;flex-direction:column;gap:18px;max-width:760px}
-.kit .intro p{margin:0;font-size:20px}
+.kit .intro p{margin:0;font-size:1.25rem}
 .kit .item{display:flex;flex-direction:column;gap:14px}
 .kit .pic{height:220px;display:flex;align-items:center}
-.kit h3{margin-top:12px;font-size:22px;font-weight:800}
-.kit .item p{margin:0;font-size:17px;line-height:1.55}
-.kit .note{margin:0;font-size:16px;line-height:1.6;color:var(--grey);max-width:760px}
+.kit h3{margin-top:12px;font-size:1.375rem;font-weight:800}
+.kit .item p{margin:0;font-size:1.0625rem;line-height:1.55}
+.kit .note{margin:0;font-size:1rem;line-height:1.6;color:var(--grey);max-width:760px}
 .story{padding:112px 0}
 .story .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:56px}
 .story figure{flex:1.2 1 520px;min-width:0;margin:0;display:flex;flex-direction:column;gap:12px}
 .story figure img{border-radius:28px;transform:rotate(-1.5deg);border:8px solid var(--lime)}
-.story figcaption{font-size:15px;font-weight:600}
+.story figcaption{font-size:0.9375rem;font-weight:600}
 .story .copy{flex:1 1 480px;min-width:0;display:flex;flex-direction:column;gap:20px}
-.story .copy p{margin:0;font-size:20px;line-height:1.6}
+.story .copy p{margin:0;font-size:1.25rem;line-height:1.6}
 .story .eyebrow{color:var(--lime-dark)}
-.story .kicker{font-size:26px;font-weight:800}
+.story .kicker{font-size:1.625rem;font-weight:800}
 .story .kicker a{text-decoration:none}
 .pilot{background:var(--yellow);padding:120px 0;overflow:hidden}
 .pilot .inner{max-width:900px;margin:0 auto;padding:0 24px;display:flex;flex-direction:column;gap:22px;position:relative}
-.pilot h2{font-size:clamp(40px,5.4vw,72px);line-height:1.04;font-weight:800;letter-spacing:-1.5px}
-.pilot p{margin:0;font-size:21px;line-height:1.55}
-.pilot .ask{font-size:26px;font-weight:800}
+.pilot h2{font-size:clamp(2.5rem,5.4vw,4.5rem);line-height:1.04;font-weight:800;letter-spacing:-1.5px}
+.pilot p{margin:0;font-size:1.3125rem;line-height:1.55}
+.pilot .ask{font-size:1.625rem;font-weight:800}
 .pilot .btn{align-self:flex-start;margin-top:6px}
-.pilot .small{margin-top:8px;font-size:15px;line-height:1.65;max-width:760px}
+.pilot .small{margin-top:8px;font-size:0.9375rem;line-height:1.65;max-width:760px}
 .partners{background:var(--ink);color:#fff;padding:120px 0}
 .partners .wrap{display:flex;flex-wrap:wrap;gap:56px}
 .partners .head{flex:1 1 520px;min-width:0;display:flex;flex-direction:column;gap:22px}
 .partners .eyebrow{color:var(--lime)}
-.partners .body{flex:1 1 460px;min-width:0;display:flex;flex-direction:column;gap:18px;font-size:18px;line-height:1.6}
+.partners .body{flex:1 1 460px;min-width:0;display:flex;flex-direction:column;gap:18px;font-size:1.125rem;line-height:1.6}
 .partners .body p{margin:0}
 .partners .free{font-weight:700;color:var(--lime)}
 .partners .btn{align-self:flex-start;margin-top:8px}
 .faq{padding:112px 0}
 .faq .inner{max-width:960px;margin:0 auto;padding:0 24px;display:flex;flex-direction:column;gap:40px}
-.faq .intro{margin:-16px 0 0;font-size:20px}
-.faq h3{margin-top:16px;font-size:26px;font-weight:800}
+.faq .intro{margin:-16px 0 0;font-size:1.25rem}
+.faq h3{margin-top:16px;font-size:1.625rem;font-weight:800}
 .qs{border-top:2px solid var(--ink)}
 .qs details{border-bottom:1px solid var(--line);padding:22px 0}
 .qs summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
 .qs summary::-webkit-details-marker{display:none}
-.qs h4{font-size:19px;font-weight:700}
-.qs .plus{font-size:28px;line-height:1;font-weight:400;transition:transform .2s}
+.qs h4{font-size:1.1875rem;font-weight:700}
+.qs .plus{font-size:1.75rem;line-height:1;font-weight:400;transition:transform .2s}
 .qs details[open] .plus{transform:rotate(45deg)}
-.qs .a{margin-top:12px;font-size:17px;line-height:1.65}
+.qs .a{margin-top:12px;font-size:1.0625rem;line-height:1.65}
 .qs .a p{margin:0 0 10px}
 .qs .a p:last-child{margin:0}
 .site-footer{background:var(--lime);padding:64px 0 48px}
 .site-footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:32px}
-.site-footer .big{font-size:clamp(56px,8vw,112px);font-weight:800;line-height:.9;letter-spacing:-3px;color:#fff}
-.site-footer .legal{font-size:14px;line-height:1.7}
-.site-footer nav{display:flex;flex-wrap:wrap;gap:24px;font-size:15px;font-weight:600}
+.site-footer .big{font-size:clamp(3.5rem,8vw,7rem);font-weight:800;line-height:.9;letter-spacing:-3px;color:#fff}
+.site-footer .legal{font-size:0.875rem;line-height:1.7}
+.site-footer nav{display:flex;flex-wrap:wrap;gap:24px;font-size:0.9375rem;font-weight:600}
 
 @media (max-width:760px){
   .nav .nl{display:none}
-  .nav .cta{padding:10px 16px;font-size:14px}
-  .logo{font-size:28px}
+  .nav .cta{padding:10px 16px;font-size:0.875rem}
+  .logo{font-size:1.75rem}
   .three{grid-template-columns:minmax(0,1fr)}
+  .hero h1 .nb,.claims li{white-space:normal}
   .hero .wrap{padding-top:32px}
-  .lede{font-size:22px}
+  .lede{font-size:1.375rem}
   .evidence,.kit,.story,.faq{padding:72px 0}
   .pilot,.partners{padding:80px 0}
   .how{padding:16px 0 72px}
   .kit .pic{height:180px}
   .strip{overflow-x:auto;margin-left:-24px;margin-right:-24px;padding:0 24px}
   .strip img{width:900px;max-width:none}
-  .btn{height:56px;padding:0 24px;font-size:17px}
+  .btn{height:56px;padding:0 24px;font-size:1.0625rem}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.qs .plus{transition:none}}
 </style>
